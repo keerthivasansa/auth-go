@@ -2,22 +2,12 @@ package main
 
 import (
 	"net/http"
-	"os"
 	"time"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-redis/redis/v8"
 	"github.com/joho/godotenv"
 )
-
-func env(key string, defaultVal string) string {
-	val, exists := os.LookupEnv(key)
-	if exists {
-		return val
-	} else {
-		return defaultVal
-	}
-}
 
 type AuthBody struct {
 	Email    string `json:"email"`
