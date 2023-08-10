@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"net/http"
 	"time"
 
@@ -58,4 +59,8 @@ func main() {
 			ctx.String(http.StatusForbidden, "Invalid credentials.")
 		}
 	})
+
+	addr := env("LISTEN_ADDR", ":5000")
+
+	log.Fatal(r.Run(addr))
 }
