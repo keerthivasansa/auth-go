@@ -1,0 +1,17 @@
+POST https://auth.keerthivasan.tech/signup
+Content-Type: application/json
+
+{
+    "email": "sakeerthi23@gmail.com", 
+    "password": "12345678"
+}
+
+###
+POST https://auth.keerthivasan.tech/login
+Content-Type: application/json
+
+{
+    "email": "sakeerthi23@gmail.com", 
+    "password": "12345678"
+}
+

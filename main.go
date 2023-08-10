@@ -22,7 +22,7 @@ func main() {
 
 	r := gin.Default()
 
-	r.GET("/signup", func(ctx *gin.Context) {
+	r.POST("/signup", func(ctx *gin.Context) {
 		var body AuthBody
 		err := ctx.Bind(&body)
 		if err != nil {
@@ -38,7 +38,7 @@ func main() {
 		ctx.String(http.StatusOK, "Successfully signed up!")
 	})
 
-	r.GET("/login", func(ctx *gin.Context) {
+	r.POST("/login", func(ctx *gin.Context) {
 		var body AuthBody
 		err := ctx.Bind(&body)
 		if err != nil {
